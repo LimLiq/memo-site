@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章メモ帳 | 管理画面</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>文章メモ帳</h1>
+    <p>PC用メモ管理画面</p>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="form-heading">新しい文章を登録</h2>
+
+      <form id="memo-form">
+        <input type="hidden" id="edit-index">
+
+        <label>番号</label>
+        <input type="text" id="memo-number" placeholder="例：003" required>
+
+        <label>タイトル</label>
+        <input type="text" id="memo-title" placeholder="文章のタイトル" required>
+
+        <label>カテゴリー</label>
+        <input type="text" id="memo-category" placeholder="例：就活" required>
+
+        <label>文章</label>
+        <textarea id="memo-body" rows="8" placeholder="文章を入力してください" required></textarea>
+
+        <button type="submit" id="save-button">登録する</button>
+        <button type="button" id="cancel-button" hidden>編集をキャンセル</button>
+      </form>
+
+      <p id="message"></p>
+    </section>
+
+    <section>
+      <h2>登録済みの文章</h2>
+      <div id="admin-memo-list"></div>
+    </section>
+
+    <section>
+      <h2>データの保存・読み込み</h2>
+
+      <p>編集した文章をJSONファイルとして保存します。</p>
+
+      <button id="export-button" type="button">
+        JSONを書き出す
+      </button>
+
+      <p>保存済みのJSONファイルを読み込む場合はこちら。</p>
+
+      <input type="file" id="import-file" accept=".json,application/json">
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章メモ帳</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>文章メモ帳</h1>
+    <p>保存した文章を簡単に検索・閲覧できます。</p>
+  </header>
+
+  <main>
+    <section class="search-area">
+      <h2>文章を検索</h2>
+
+      <input
+        type="search"
+        id="search-input"
+        placeholder="番号・タイトル・本文から検索"
+      >
+
+      <select id="category-filter">
+        <option value="">すべてのカテゴリー</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="favorites-only">
+        お気に入りのみ表示
+      </label>
+    </section>
+
+    <section class="memo-area">
+      <h2>登録済みの文章</h2>
+      <p id="result-count">0件</p>
+      <div id="memo-list"></div>
+    </section>
+
+    <section>
+      <h2>管理画面</h2>
+      <p>文章の登録・編集・削除はこちらから行えます。</p>
+      <a href="admin.html">管理画面を開く</a>
+    </section>
+  </main>
+
+  <script src="viewer.js"></script>
+</body>
+</html>

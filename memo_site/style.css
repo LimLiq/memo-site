@@ -1,0 +1,190 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Meiryo", sans-serif;
+  background: #f4f6fa;
+  color: #333;
+}
+
+header {
+  background: #354b70;
+  color: white;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+header p {
+  margin: 0;
+  font-size: 14px;
+}
+
+main {
+  width: 100%;
+  max-width: 850px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  padding: 22px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #00000010;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 19px;
+  color: #354b70;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="file"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0 16px;
+  border: 1px solid #d5dbe5;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+button {
+  padding: 11px 18px;
+  margin: 5px 5px 5px 0;
+  border: none;
+  border-radius: 8px;
+  background: #354b70;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#cancel-button,
+#admin-memo-list button:last-child {
+  background: #777;
+}
+
+#message {
+  color: #354b70;
+  font-size: 14px;
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+/* 文章カード */
+.memo-card {
+  padding: 16px;
+  margin-bottom: 14px;
+  background: #fff;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+}
+
+.memo-card h3 {
+  margin: 8px 0;
+  font-size: 17px;
+  color: #354b70;
+  overflow-wrap: anywhere;
+}
+
+.memo-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.memo-card p:first-child {
+  color: #888;
+  font-size: 12px;
+}
+
+.memo-card span {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #eaf0fa;
+  color: #354b70;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* 閲覧画面 */
+input[type="search"] {
+  margin-bottom: 12px;
+}
+
+#result-count {
+  color: #777;
+  font-size: 13px;
+}
+
+.favorite-button {
+  background: #eaf0fa;
+  color: #354b70;
+  border: 1px solid #d5dbe5;
+}
+
+/* スマートフォン対応 */
+@media (max-width: 600px) {
+  header {
+    padding: 20px 12px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  main {
+    margin: 16px auto;
+    padding: 0 10px;
+  }
+
+  section {
+    padding: 16px;
+    margin-bottom: 14px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  .memo-card {
+    padding: 14px;
+  }
+
+  button {
+    padding: 12px 16px;
+  }
+}
